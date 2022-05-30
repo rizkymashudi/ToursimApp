@@ -1,0 +1,689 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		12E22ECCD7C1CA90DF08F86E /* Pods_ToursimApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C1958AEB27FE6DA07E699C8 /* Pods_ToursimApp.framework */; };
+		F52876972844BB400002DC5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876962844BB400002DC5C /* AppDelegate.swift */; };
+		F52876A02844BB410002DC5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F528769F2844BB410002DC5C /* Assets.xcassets */; };
+		F52876A32844BB410002DC5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F52876A12844BB410002DC5C /* LaunchScreen.storyboard */; };
+		F52876BF2844BC500002DC5C /* AppAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876BE2844BC500002DC5C /* AppAssembler.swift */; };
+		F52876C12844BCB30002DC5C /* HomeAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876C02844BCB30002DC5C /* HomeAssembler.swift */; };
+		F52876CA2844BD130002DC5C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F52876C82844BD130002DC5C /* HomeViewController.xib */; };
+		F52876CC2844BD350002DC5C /* HomeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876CB2844BD350002DC5C /* HomeNavigator.swift */; };
+		F52876CE2844BD9C0002DC5C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876CD2844BD9C0002DC5C /* HomeViewController.swift */; };
+		F52876D02844BDAE0002DC5C /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876CF2844BDAE0002DC5C /* HomeTabBarViewController.swift */; };
+		F52876D22844C2300002DC5C /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876D12844C2300002DC5C /* UIImage.swift */; };
+		F52876D42844C2390002DC5C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876D32844C2390002DC5C /* UIColor.swift */; };
+		F52876D62844C2420002DC5C /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876D52844C2420002DC5C /* UIView.swift */; };
+		F52876D82844C2540002DC5C /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876D72844C2540002DC5C /* UIViewController.swift */; };
+		F52876DA2844C2640002DC5C /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876D92844C2640002DC5C /* String.swift */; };
+		F52876DC2844C2EC0002DC5C /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876DB2844C2EC0002DC5C /* UIFont.swift */; };
+		F52876DE2844C39C0002DC5C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876DD2844C39C0002DC5C /* Constants.swift */; };
+		F52876E02844C3CD0002DC5C /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876DF2844C3CD0002DC5C /* ApiError.swift */; };
+		F52876E22844C4010002DC5C /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876E12844C4010002DC5C /* APIError.swift */; };
+		F52876E42844C5480002DC5C /* ApiFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876E32844C5480002DC5C /* ApiFactory.swift */; };
+		F52876E62844C5880002DC5C /* TourismAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876E52844C5880002DC5C /* TourismAPI.swift */; };
+		F52876E82844C8D90002DC5C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876E72844C8D90002DC5C /* NetworkService.swift */; };
+		F52876EA2844C90C0002DC5C /* Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52876E92844C90C0002DC5C /* Encodable.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C1958AEB27FE6DA07E699C8 /* Pods_ToursimApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToursimApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BE21328E72A80CC41782132 /* Pods-ToursimApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToursimApp.release.xcconfig"; path = "Target Support Files/Pods-ToursimApp/Pods-ToursimApp.release.xcconfig"; sourceTree = "<group>"; };
+		D2CD9620EEBACDEFE65B89B3 /* Pods-ToursimApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToursimApp.debug.xcconfig"; path = "Target Support Files/Pods-ToursimApp/Pods-ToursimApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F52876932844BB400002DC5C /* ToursimApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToursimApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F52876962844BB400002DC5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F528769F2844BB410002DC5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F52876A22844BB410002DC5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F52876A42844BB410002DC5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F52876BE2844BC500002DC5C /* AppAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAssembler.swift; sourceTree = "<group>"; };
+		F52876C02844BCB30002DC5C /* HomeAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembler.swift; sourceTree = "<group>"; };
+		F52876C82844BD130002DC5C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		F52876CB2844BD350002DC5C /* HomeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavigator.swift; sourceTree = "<group>"; };
+		F52876CD2844BD9C0002DC5C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F52876CF2844BDAE0002DC5C /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		F52876D12844C2300002DC5C /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		F52876D32844C2390002DC5C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F52876D52844C2420002DC5C /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		F52876D72844C2540002DC5C /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F52876D92844C2640002DC5C /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		F52876DB2844C2EC0002DC5C /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		F52876DD2844C39C0002DC5C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F52876DF2844C3CD0002DC5C /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		F52876E12844C4010002DC5C /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		F52876E32844C5480002DC5C /* ApiFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFactory.swift; sourceTree = "<group>"; };
+		F52876E52844C5880002DC5C /* TourismAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourismAPI.swift; sourceTree = "<group>"; };
+		F52876E72844C8D90002DC5C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		F52876E92844C90C0002DC5C /* Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Encodable.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F52876902844BB400002DC5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12E22ECCD7C1CA90DF08F86E /* Pods_ToursimApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6C3486E9EA03923B58C3C9F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C1958AEB27FE6DA07E699C8 /* Pods_ToursimApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		977EB039D9E905C4CD705C25 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2CD9620EEBACDEFE65B89B3 /* Pods-ToursimApp.debug.xcconfig */,
+				9BE21328E72A80CC41782132 /* Pods-ToursimApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F528768A2844BB400002DC5C = {
+			isa = PBXGroup;
+			children = (
+				F52876952844BB400002DC5C /* ToursimApp */,
+				F52876942844BB400002DC5C /* Products */,
+				977EB039D9E905C4CD705C25 /* Pods */,
+				6C3486E9EA03923B58C3C9F5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F52876942844BB400002DC5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F52876932844BB400002DC5C /* ToursimApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F52876952844BB400002DC5C /* ToursimApp */ = {
+			isa = PBXGroup;
+			children = (
+				F52876AD2844BB720002DC5C /* Dependency */,
+				F52876AA2844BB590002DC5C /* App */,
+				F52876AB2844BB600002DC5C /* Domain */,
+				F52876AC2844BB660002DC5C /* Data */,
+			);
+			path = ToursimApp;
+			sourceTree = "<group>";
+		};
+		F52876AA2844BB590002DC5C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F52876AE2844BB7D0002DC5C /* Extensions */,
+				F52876AF2844BB860002DC5C /* Features */,
+				F52876B12844BB950002DC5C /* Main */,
+				F52876B22844BB990002DC5C /* Resources */,
+				F52876B02844BB900002DC5C /* Utils */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F52876AB2844BB600002DC5C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				F52876B62844BBEC0002DC5C /* UseCase */,
+				F52876B52844BBE90002DC5C /* Model */,
+				F52876B42844BBE30002DC5C /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		F52876AC2844BB660002DC5C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				F52876B72844BBF20002DC5C /* APIs */,
+				F52876B82844BBFE0002DC5C /* DataSources */,
+				F52876BC2844BC200002DC5C /* Entities */,
+				F52876BA2844BC0C0002DC5C /* Repository */,
+				F52876B92844BC060002DC5C /* Services */,
+				F52876BB2844BC120002DC5C /* Utils */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		F52876AD2844BB720002DC5C /* Dependency */ = {
+			isa = PBXGroup;
+			children = (
+				F52876BE2844BC500002DC5C /* AppAssembler.swift */,
+				F52876BD2844BC3A0002DC5C /* Features */,
+			);
+			path = Dependency;
+			sourceTree = "<group>";
+		};
+		F52876AE2844BB7D0002DC5C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F52876D92844C2640002DC5C /* String.swift */,
+				F52876D32844C2390002DC5C /* UIColor.swift */,
+				F52876D12844C2300002DC5C /* UIImage.swift */,
+				F52876D52844C2420002DC5C /* UIView.swift */,
+				F52876D72844C2540002DC5C /* UIViewController.swift */,
+				F52876DB2844C2EC0002DC5C /* UIFont.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F52876AF2844BB860002DC5C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F52876C22844BCDB0002DC5C /* Home */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F52876B02844BB900002DC5C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F52876DD2844C39C0002DC5C /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F52876B12844BB950002DC5C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				F52876962844BB400002DC5C /* AppDelegate.swift */,
+				F52876A12844BB410002DC5C /* LaunchScreen.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F52876B22844BB990002DC5C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F528769F2844BB410002DC5C /* Assets.xcassets */,
+				F52876B32844BB9F0002DC5C /* Plists */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F52876B32844BB9F0002DC5C /* Plists */ = {
+			isa = PBXGroup;
+			children = (
+				F52876A42844BB410002DC5C /* Info.plist */,
+			);
+			path = Plists;
+			sourceTree = "<group>";
+		};
+		F52876B42844BBE30002DC5C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F52876B52844BBE90002DC5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F52876DF2844C3CD0002DC5C /* ApiError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F52876B62844BBEC0002DC5C /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		F52876B72844BBF20002DC5C /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				F52876E52844C5880002DC5C /* TourismAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
+		F52876B82844BBFE0002DC5C /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		F52876B92844BC060002DC5C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F52876E12844C4010002DC5C /* APIError.swift */,
+				F52876E32844C5480002DC5C /* ApiFactory.swift */,
+				F52876E72844C8D90002DC5C /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F52876BA2844BC0C0002DC5C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		F52876BB2844BC120002DC5C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F52876E92844C90C0002DC5C /* Encodable.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		F52876BC2844BC200002DC5C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		F52876BD2844BC3A0002DC5C /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				F52876C02844BCB30002DC5C /* HomeAssembler.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		F52876C22844BCDB0002DC5C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F52876C62844BCFF0002DC5C /* Navigator */,
+				F52876C52844BCF50002DC5C /* ViewModel */,
+				F52876C42844BCEB0002DC5C /* Views */,
+				F52876C32844BCE00002DC5C /* ViewController */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F52876C32844BCE00002DC5C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F52876C82844BD130002DC5C /* HomeViewController.xib */,
+				F52876CD2844BD9C0002DC5C /* HomeViewController.swift */,
+				F52876CF2844BDAE0002DC5C /* HomeTabBarViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F52876C42844BCEB0002DC5C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F52876C52844BCF50002DC5C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F52876C62844BCFF0002DC5C /* Navigator */ = {
+			isa = PBXGroup;
+			children = (
+				F52876CB2844BD350002DC5C /* HomeNavigator.swift */,
+			);
+			path = Navigator;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F52876922844BB400002DC5C /* ToursimApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F52876A72844BB410002DC5C /* Build configuration list for PBXNativeTarget "ToursimApp" */;
+			buildPhases = (
+				F3CC9E7476702B41867264A5 /* [CP] Check Pods Manifest.lock */,
+				F528768F2844BB400002DC5C /* Sources */,
+				F52876902844BB400002DC5C /* Frameworks */,
+				F52876912844BB400002DC5C /* Resources */,
+				1850E3C60B311C17E077C73E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ToursimApp;
+			productName = ToursimApp;
+			productReference = F52876932844BB400002DC5C /* ToursimApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F528768B2844BB400002DC5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					F52876922844BB400002DC5C = {
+						CreatedOnToolsVersion = 13.4;
+					};
+				};
+			};
+			buildConfigurationList = F528768E2844BB400002DC5C /* Build configuration list for PBXProject "ToursimApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F528768A2844BB400002DC5C;
+			productRefGroup = F52876942844BB400002DC5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F52876922844BB400002DC5C /* ToursimApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F52876912844BB400002DC5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F52876A32844BB410002DC5C /* LaunchScreen.storyboard in Resources */,
+				F52876A02844BB410002DC5C /* Assets.xcassets in Resources */,
+				F52876CA2844BD130002DC5C /* HomeViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1850E3C60B311C17E077C73E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ToursimApp/Pods-ToursimApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ToursimApp/Pods-ToursimApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ToursimApp/Pods-ToursimApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3CC9E7476702B41867264A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ToursimApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F528768F2844BB400002DC5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F52876CE2844BD9C0002DC5C /* HomeViewController.swift in Sources */,
+				F52876DA2844C2640002DC5C /* String.swift in Sources */,
+				F52876BF2844BC500002DC5C /* AppAssembler.swift in Sources */,
+				F52876CC2844BD350002DC5C /* HomeNavigator.swift in Sources */,
+				F52876E82844C8D90002DC5C /* NetworkService.swift in Sources */,
+				F52876D02844BDAE0002DC5C /* HomeTabBarViewController.swift in Sources */,
+				F52876D82844C2540002DC5C /* UIViewController.swift in Sources */,
+				F52876C12844BCB30002DC5C /* HomeAssembler.swift in Sources */,
+				F52876E02844C3CD0002DC5C /* ApiError.swift in Sources */,
+				F52876E22844C4010002DC5C /* APIError.swift in Sources */,
+				F52876DE2844C39C0002DC5C /* Constants.swift in Sources */,
+				F52876D42844C2390002DC5C /* UIColor.swift in Sources */,
+				F52876DC2844C2EC0002DC5C /* UIFont.swift in Sources */,
+				F52876E62844C5880002DC5C /* TourismAPI.swift in Sources */,
+				F52876972844BB400002DC5C /* AppDelegate.swift in Sources */,
+				F52876EA2844C90C0002DC5C /* Encodable.swift in Sources */,
+				F52876E42844C5480002DC5C /* ApiFactory.swift in Sources */,
+				F52876D62844C2420002DC5C /* UIView.swift in Sources */,
+				F52876D22844C2300002DC5C /* UIImage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F52876A12844BB410002DC5C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F52876A22844BB410002DC5C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F52876A52844BB410002DC5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F52876A62844BB410002DC5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F52876A82844BB410002DC5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2CD9620EEBACDEFE65B89B3 /* Pods-ToursimApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72B4ASD893;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToursimApp/App/Resources/Plists/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.rizkym.ToursimApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F52876A92844BB410002DC5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BE21328E72A80CC41782132 /* Pods-ToursimApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 72B4ASD893;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ToursimApp/App/Resources/Plists/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = id.rizkym.ToursimApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F528768E2844BB400002DC5C /* Build configuration list for PBXProject "ToursimApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F52876A52844BB410002DC5C /* Debug */,
+				F52876A62844BB410002DC5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F52876A72844BB410002DC5C /* Build configuration list for PBXNativeTarget "ToursimApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F52876A82844BB410002DC5C /* Debug */,
+				F52876A92844BB410002DC5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F528768B2844BB400002DC5C /* Project object */;
+}
