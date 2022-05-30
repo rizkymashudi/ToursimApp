@@ -24,11 +24,11 @@ extension HomeAssembler where Self: Assembler {
   }
 
   func resolve() -> HomeViewController {
-    return HomeViewController(viewModel: resolve())
+    return HomeViewController()
   }
 
   func resolve() -> HomeTabBarViewController {
-    return HomeTabBarViewController()
+    return HomeTabBarViewController(navigator: resolve())
   }
 //  func resolve() -> HomeViewModel {
 //    return HomeViewModel(useCase: resolve())

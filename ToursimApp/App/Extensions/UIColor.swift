@@ -47,3 +47,7 @@ extension UIColor {
     return nil
   }
 }
+
+extension UIColor {
+  static let primaryColor = UIColor(named: "PrimaryColor")
+}

@@ -7,6 +7,7 @@
 
 import Foundation
 
-protocol Assembler: HomeAssembler {}
+protocol Assembler: HomeAssembler,
+                    ProfileAssembler {}
 
 class AppAssembler: Assembler {}

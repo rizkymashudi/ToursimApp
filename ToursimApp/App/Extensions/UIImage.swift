@@ -8,4 +8,9 @@
 import Foundation
 import UIKit
 
-extension UIImage {}
+extension UIImage {
+  static let home = UIImage(systemName: "list.dash")
+  static let profile = UIImage(systemName: "person.circle")
+  static let icLike = UIImage(systemName: "heart.fill")
+  static let icBack = UIImage(systemName: "chevron.backward")
+}
