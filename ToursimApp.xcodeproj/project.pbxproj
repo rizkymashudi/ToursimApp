@@ -45,6 +45,7 @@
 		F528770A28450C050002DC5C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528770828450C050002DC5C /* ProfileViewController.swift */; };
 		F528770B28450C050002DC5C /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F528770928450C050002DC5C /* ProfileViewController.xib */; };
 		F528770D28450C3E0002DC5C /* ProfileAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528770C28450C3E0002DC5C /* ProfileAssembler.swift */; };
+		F528770F284591500002DC5C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528770E284591500002DC5C /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		F528770828450C050002DC5C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F528770928450C050002DC5C /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		F528770C28450C3E0002DC5C /* ProfileAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembler.swift; sourceTree = "<group>"; };
+		F528770E284591500002DC5C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +355,7 @@
 		F52876C42844BCEB0002DC5C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F528770E284591500002DC5C /* HomeTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				F52876D42844C2390002DC5C /* UIColor.swift in Sources */,
 				F52876DC2844C2EC0002DC5C /* UIFont.swift in Sources */,
 				F52876E62844C5880002DC5C /* TourismAPI.swift in Sources */,
+				F528770F284591500002DC5C /* HomeTableViewCell.swift in Sources */,
 				F52876972844BB400002DC5C /* AppDelegate.swift in Sources */,
 				F52876EA2844C90C0002DC5C /* Encodable.swift in Sources */,
 				F52876E42844C5480002DC5C /* ApiFactory.swift in Sources */,

@@ -9,6 +9,7 @@ import UIKit
 import SVProgressHUD
 
 enum NavigationBarType {
+  case largeTitle(title: String?)
   case backTransparent
 }
 
@@ -42,6 +43,13 @@ extension UIViewController {
     navigationController?.navigationBar.isTranslucent = true
   }
   
+  private func setLargeNavigationTitle() {
+    navigationController?.navigationBar.backgroundColor = .clear
+    navigationController?.navigationBar.barTintColor = .clear
+    navigationController?.navigationBar.isTranslucent = true
+    navigationController?.navigationBar.prefersLargeTitles = true
+  }
+  
   func setNavigationBar(type: NavigationBarType) {
     setDefaultNavigationTheme()
     
@@ -49,6 +57,9 @@ extension UIViewController {
     case .backTransparent:
       navigationItem.leftBarButtonItem = createBackButton()
       setTransparentNavigationTheme()
+    case .largeTitle(let title):
+      navigationItem.title = title
+      setLargeNavigationTitle()
     }
   }
 }
