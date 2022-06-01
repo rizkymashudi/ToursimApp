@@ -14,4 +14,5 @@ extension UIImage {
   static let icLike = UIImage(systemName: "heart.fill")
   static let icBack = UIImage(systemName: "chevron.backward")
   static let imgProfile = UIImage(named: "Profile")
+  
 }

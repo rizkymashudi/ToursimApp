@@ -9,15 +9,15 @@ import Foundation
 import Moya
 
 enum TourismAPI {
-  case list
+  case tourismList
 }
 
 extension TourismAPI: TargetType {
     
   var path: String {
     switch self {
-    case .list:
-      return ""
+    case .tourismList:
+      return "/list"
     }
   }
   
@@ -27,7 +27,7 @@ extension TourismAPI: TargetType {
   
   var task: Task {
     switch self {
-    case .list:
+    case .tourismList:
       return .requestPlain
     }
   }

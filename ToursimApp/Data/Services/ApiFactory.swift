@@ -9,7 +9,7 @@ import Foundation
 import Moya
 
 enum BaseApi {
-  case tourismApi(api: TourismAPI)
+  case tourismList(api: TourismAPI)
 }
 
 extension BaseApi: TargetType {
@@ -19,28 +19,28 @@ extension BaseApi: TargetType {
   
   var path: String {
     switch self {
-    case .tourismApi(let api):
+    case .tourismList(let api):
       return api.path
     }
   }
-  
+    
   var method: Moya.Method {
     switch self {
-    case .tourismApi(let api):
+    case .tourismList(let api):
       return api.method
     }
   }
   
   var task: Task {
     switch self {
-    case .tourismApi(let api):
+    case .tourismList(let api):
       return api.task
     }
   }
   
   var headers: [String : String]? {
     switch self {
-    case .tourismApi(let api):
+    case .tourismList(let api):
       return api.headers
     }
   }
@@ -52,11 +52,11 @@ extension BaseApi {
       return MoyaProvider.defaultEndpointMapping(for: self)
     }
   }
-  
+
   var composedUrl: URL? {
     get {
       let endpoint = endpointClosure(self)
-      
+
       do {
         let url = try endpoint.urlRequest().url
         return url

@@ -46,6 +46,15 @@
 		F528770B28450C050002DC5C /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F528770928450C050002DC5C /* ProfileViewController.xib */; };
 		F528770D28450C3E0002DC5C /* ProfileAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528770C28450C3E0002DC5C /* ProfileAssembler.swift */; };
 		F528770F284591500002DC5C /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528770E284591500002DC5C /* HomeTableViewCell.swift */; };
+		F5287725284792990002DC5C /* Tourism.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5287724284792990002DC5C /* Tourism.swift */; };
+		F5287728284794420002DC5C /* GetTourismList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5287727284794420002DC5C /* GetTourismList.swift */; };
+		F528772A2847949E0002DC5C /* TourismRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52877292847949E0002DC5C /* TourismRepository.swift */; };
+		F528772D284795320002DC5C /* TourismRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528772C284795320002DC5C /* TourismRemoteDataSource.swift */; };
+		F528772F284795700002DC5C /* TourismResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528772E284795700002DC5C /* TourismResponse.swift */; };
+		F528773128479B000002DC5C /* DefaultTourismRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528773028479B000002DC5C /* DefaultTourismRepository.swift */; };
+		F528773328479CF00002DC5C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528773228479CF00002DC5C /* HomeViewModel.swift */; };
+		F555744B2847C2500029F387 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555744A2847C2500029F387 /* DetailViewController.swift */; };
+		F555744D2847C4650029F387 /* DetailAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555744C2847C4650029F387 /* DetailAssembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +101,15 @@
 		F528770928450C050002DC5C /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		F528770C28450C3E0002DC5C /* ProfileAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembler.swift; sourceTree = "<group>"; };
 		F528770E284591500002DC5C /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		F5287724284792990002DC5C /* Tourism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tourism.swift; sourceTree = "<group>"; };
+		F5287727284794420002DC5C /* GetTourismList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTourismList.swift; sourceTree = "<group>"; };
+		F52877292847949E0002DC5C /* TourismRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourismRepository.swift; sourceTree = "<group>"; };
+		F528772C284795320002DC5C /* TourismRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourismRemoteDataSource.swift; sourceTree = "<group>"; };
+		F528772E284795700002DC5C /* TourismResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourismResponse.swift; sourceTree = "<group>"; };
+		F528773028479B000002DC5C /* DefaultTourismRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTourismRepository.swift; sourceTree = "<group>"; };
+		F528773228479CF00002DC5C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		F555744A2847C2500029F387 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F555744C2847C4650029F387 /* DetailAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +274,7 @@
 		F52876B42844BBE30002DC5C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				F52877292847949E0002DC5C /* TourismRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -264,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				F52876DF2844C3CD0002DC5C /* ApiError.swift */,
+				F5287724284792990002DC5C /* Tourism.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,6 +291,7 @@
 		F52876B62844BBEC0002DC5C /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				F5287726284794160002DC5C /* Home */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -286,6 +307,7 @@
 		F52876B82844BBFE0002DC5C /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
+				F528772B2847950F0002DC5C /* Remote */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -303,6 +325,7 @@
 		F52876BA2844BC0C0002DC5C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				F528773028479B000002DC5C /* DefaultTourismRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -318,6 +341,7 @@
 		F52876BC2844BC200002DC5C /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				F528772E284795700002DC5C /* TourismResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -327,6 +351,7 @@
 			children = (
 				F52876C02844BCB30002DC5C /* HomeAssembler.swift */,
 				F528770C28450C3E0002DC5C /* ProfileAssembler.swift */,
+				F555744C2847C4650029F387 /* DetailAssembler.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -348,6 +373,7 @@
 				F52876C82844BD130002DC5C /* HomeViewController.xib */,
 				F52876CD2844BD9C0002DC5C /* HomeViewController.swift */,
 				F52876CF2844BDAE0002DC5C /* HomeTabBarViewController.swift */,
+				F555744A2847C2500029F387 /* DetailViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -363,6 +389,7 @@
 		F52876C52844BCF50002DC5C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F528773228479CF00002DC5C /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -409,6 +436,22 @@
 				F528770928450C050002DC5C /* ProfileViewController.xib */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F5287726284794160002DC5C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F5287727284794420002DC5C /* GetTourismList.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F528772B2847950F0002DC5C /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				F528772C284795320002DC5C /* TourismRemoteDataSource.swift */,
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,8 +584,10 @@
 			files = (
 				F52876CE2844BD9C0002DC5C /* HomeViewController.swift in Sources */,
 				F52876DA2844C2640002DC5C /* String.swift in Sources */,
+				F555744D2847C4650029F387 /* DetailAssembler.swift in Sources */,
 				F528770A28450C050002DC5C /* ProfileViewController.swift in Sources */,
 				F52876BF2844BC500002DC5C /* AppAssembler.swift in Sources */,
+				F528772D284795320002DC5C /* TourismRemoteDataSource.swift in Sources */,
 				F52876CC2844BD350002DC5C /* HomeNavigator.swift in Sources */,
 				F52876E82844C8D90002DC5C /* NetworkService.swift in Sources */,
 				F52876D02844BDAE0002DC5C /* HomeTabBarViewController.swift in Sources */,
@@ -553,12 +598,19 @@
 				F528770D28450C3E0002DC5C /* ProfileAssembler.swift in Sources */,
 				F52876DE2844C39C0002DC5C /* Constants.swift in Sources */,
 				F52876D42844C2390002DC5C /* UIColor.swift in Sources */,
+				F528773328479CF00002DC5C /* HomeViewModel.swift in Sources */,
+				F5287728284794420002DC5C /* GetTourismList.swift in Sources */,
 				F52876DC2844C2EC0002DC5C /* UIFont.swift in Sources */,
+				F528772F284795700002DC5C /* TourismResponse.swift in Sources */,
 				F52876E62844C5880002DC5C /* TourismAPI.swift in Sources */,
+				F528772A2847949E0002DC5C /* TourismRepository.swift in Sources */,
 				F528770F284591500002DC5C /* HomeTableViewCell.swift in Sources */,
 				F52876972844BB400002DC5C /* AppDelegate.swift in Sources */,
 				F52876EA2844C90C0002DC5C /* Encodable.swift in Sources */,
+				F5287725284792990002DC5C /* Tourism.swift in Sources */,
 				F52876E42844C5480002DC5C /* ApiFactory.swift in Sources */,
+				F528773128479B000002DC5C /* DefaultTourismRepository.swift in Sources */,
+				F555744B2847C2500029F387 /* DetailViewController.swift in Sources */,
 				F52876D62844C2420002DC5C /* UIView.swift in Sources */,
 				F52876D22844C2300002DC5C /* UIImage.swift in Sources */,
 			);
@@ -717,7 +769,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -746,7 +798,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

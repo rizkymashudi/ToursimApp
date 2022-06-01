@@ -50,4 +50,6 @@ extension UIColor {
 
 extension UIColor {
   static let primaryColor = UIColor(named: "PrimaryColor")
+  static let tintColor = UIColor(named: "TintColor")
+  static let shadowColor = UIColor(red: 0.715, green: 0.754, blue: 0.77, alpha: 0.2)
 }

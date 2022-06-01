@@ -21,23 +21,17 @@ class HomeTabBarViewController: UITabBarController{
     fatalError("init(coder:) has not been implemented")
   }
   
-  
+  // MARK: - lifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = UIColor.white
     configureTabBar()
   }
     
   // MARK: - Setup views
   private func configureTabBar(){
-    tabBar.isTranslucent = false
-    tabBar.barTintColor = UIColor.black
-    tabBar.tintColor = UIColor.black
-    tabBar.shadowImage = nil
-//    tabBar.layer.shadowColor = UIColor.primaryColor?.cgColor
-//    tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
-//    tabBar.layer.shadowRadius = 4
-//    tabBar.layer.shadowOpacity = 1
+    tabBar.backgroundColor = .white
+    tabBar.barTintColor = .white
+    tabBar.tintColor = .tintColor
     
     delegate = self
     
@@ -52,6 +46,8 @@ class HomeTabBarViewController: UITabBarController{
     tabController.tabBarItem.image = image.withRenderingMode(.alwaysOriginal)
     tabController.tabBarItem.selectedImage = image.withRenderingMode(.alwaysTemplate)
     tabController.tabBarItem.title = title
+    tabController.navigationBar.prefersLargeTitles = true
+    vc.navigationItem.title = title
     
     return tabController
   }

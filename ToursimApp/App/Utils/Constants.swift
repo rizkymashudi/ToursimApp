@@ -8,8 +8,6 @@
 import Foundation
 
 struct Constants {
-  static let imgUrl = ""
-  static let baseUrl = ""
-  static let token = ""
+  static let baseUrl = "https://tourism-api.dicoding.dev"
   static let enUs = "en-US"
 }
