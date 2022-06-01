@@ -55,7 +55,6 @@
 		F528773328479CF00002DC5C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528773228479CF00002DC5C /* HomeViewModel.swift */; };
 		F555744B2847C2500029F387 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555744A2847C2500029F387 /* DetailViewController.swift */; };
 		F555744D2847C4650029F387 /* DetailAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F555744C2847C4650029F387 /* DetailAssembler.swift */; };
-		F5557451284807350029F387 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5557450284807350029F387 /* DetailTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,7 +110,6 @@
 		F528773228479CF00002DC5C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		F555744A2847C2500029F387 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F555744C2847C4650029F387 /* DetailAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAssembler.swift; sourceTree = "<group>"; };
-		F5557450284807350029F387 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -384,7 +382,6 @@
 			isa = PBXGroup;
 			children = (
 				F528770E284591500002DC5C /* HomeTableViewCell.swift */,
-				F5557450284807350029F387 /* DetailTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -595,7 +592,6 @@
 				F52876E82844C8D90002DC5C /* NetworkService.swift in Sources */,
 				F52876D02844BDAE0002DC5C /* HomeTabBarViewController.swift in Sources */,
 				F52876D82844C2540002DC5C /* UIViewController.swift in Sources */,
-				F5557451284807350029F387 /* DetailTableViewCell.swift in Sources */,
 				F52876C12844BCB30002DC5C /* HomeAssembler.swift in Sources */,
 				F52876E02844C3CD0002DC5C /* ApiError.swift in Sources */,
 				F52876E22844C4010002DC5C /* APIError.swift in Sources */,
