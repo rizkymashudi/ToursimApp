@@ -10,7 +10,49 @@ import UIKit
 class DetailViewController: UIViewController {
   
   // MARK: - Subview Properties
-  private var tableView = UITableView()
+  private lazy var scrollView: UIScrollView = {
+    let newSubview = UIScrollView()
+    return newSubview
+  }()
+  
+  private lazy var containerView: UIView = {
+    let newSubview = UIView()
+    newSubview.setDimensions(height: 1100)
+    return newSubview
+  }()
+  
+  private lazy var imgDetail: UIImageView = {
+    let newSubview = UIImageView()
+    newSubview.setDimensions(width: 358, height: 215)
+    newSubview.clipsToBounds = true
+    newSubview.layer.cornerRadius = 8
+    newSubview.contentMode = .scaleAspectFill
+    
+    return newSubview
+  }()
+  
+  private lazy var lblName: UILabel = {
+    let newSubview = UILabel()
+    newSubview.font = UIFont.font(type: .robotoMedium, size: 20)
+    
+    return newSubview
+  }()
+  
+  private lazy var lblAddress: UILabel = {
+    let newSubview = UILabel()
+    newSubview.font = UIFont.font(type: .robotoRegular, size: 18)
+    newSubview.numberOfLines = 0
+    
+    return newSubview
+  }()
+  
+  private lazy var lblDesc: UILabel = {
+    let newSubview = UILabel()
+    newSubview.font = UIFont.font(type: .robotoRegular, size: 15)
+    newSubview.numberOfLines = 0
+    
+    return newSubview
+  }()
     
   // MARK: - Variables
   var tourismDetail: Place?
@@ -23,6 +65,8 @@ class DetailViewController: UIViewController {
     fatalError("init(coder:) has not been implemented")
   }
   
+  
+  // MARK: - lifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
     configureView()
@@ -34,44 +78,52 @@ class DetailViewController: UIViewController {
     navigationItem.title = "Detail"
   }
   
+  
+  // MARK: - Setup views
   private func configureView(){
     view.backgroundColor = .white
     
-    view.addSubview(tableView)
-    tableView.anchor(left: view.leftAnchor, paddingLeft: 0)
-    tableView.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 0)
-    tableView.anchor(right: view.rightAnchor, paddingRight: 0)
-    tableView.anchor(bottom: view.bottomAnchor, paddingBottom: 0)
+    guard let tourismDetail = tourismDetail else { return }
+
+    view.addSubview(scrollView)
+    scrollView.anchor(left: view.leftAnchor, paddingLeft: 0)
+    scrollView.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 0)
+    scrollView.anchor(right: view.rightAnchor, paddingRight: 0)
+    scrollView.anchor(bottom: view.bottomAnchor, paddingBottom: 0)
     
-    tableView.register(DetailTableViewCell.self, forCellReuseIdentifier: DetailTableViewCell.identifier)
-    tableView.delegate = self
-    tableView.dataSource = self
-    tableView.separatorColor = .clear
-  
+    scrollView.addSubview(containerView)
+    containerView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
+    containerView.anchor(left: scrollView.leftAnchor, paddingLeft: 0)
+    containerView.anchor(top: scrollView.topAnchor, paddingTop: 0)
+    containerView.anchor(right: scrollView.rightAnchor, paddingRight: 0)
+    containerView.anchor(bottom: scrollView.bottomAnchor, paddingBottom: 0)
+    
+    scrollView.addSubview(imgDetail)
+    guard let tourismImage = tourismDetail.image else { return }
+    let imgUrl = URL(string: tourismImage)
+    imgDetail.sd_setImage(with: imgUrl)
+    imgDetail.anchor(left: scrollView.leftAnchor, paddingLeft: 16)
+    imgDetail.anchor(top: scrollView.topAnchor, paddingTop: 25)
+    imgDetail.anchor(right: scrollView.rightAnchor, paddingRight: 16)
+    
+    scrollView.addSubview(lblName)
+    lblName.anchor(left: scrollView.leftAnchor, paddingLeft: 16)
+    lblName.anchor(top: imgDetail.bottomAnchor, paddingTop: 22)
+    lblName.anchor(right: scrollView.rightAnchor, paddingRight: 16)
+    lblName.text = tourismDetail.name
+    
+    scrollView.addSubview(lblAddress)
+    lblAddress.anchor(left: scrollView.leftAnchor, paddingLeft: 16)
+    lblAddress.anchor(top: lblName.bottomAnchor, paddingTop: 6)
+    lblAddress.anchor(right: scrollView.rightAnchor, paddingRight: 16)
+    lblAddress.text = tourismDetail.address
+      
+    scrollView.addSubview(lblDesc)
+    lblDesc.anchor(left: scrollView.leftAnchor, paddingLeft: 16)
+    lblDesc.anchor(top: lblAddress.bottomAnchor, paddingTop: 20)
+    lblDesc.anchor(right: scrollView.rightAnchor, paddingRight: 16)
+    lblDesc.text = tourismDetail.description
   }
 
 }
 
-extension DetailViewController: UITableViewDelegate, UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 1
-  }
-  
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: DetailTableViewCell.identifier, for: indexPath) as! DetailTableViewCell
-    
-    if let tourismDetail = tourismDetail {
-      let imgUrl = URL(string: tourismDetail.image!)
-      cell.imgDetail.sd_setImage(with: imgUrl)
-      cell.lblName.text = tourismDetail.name
-      cell.lblAddress.text = tourismDetail.address
-      cell.lblDesc.text = tourismDetail.description
-    }
-    
-    return cell
-  }
-  
-  func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-    tableView.deselectRow(at: indexPath, animated: true)
-  }
-}
