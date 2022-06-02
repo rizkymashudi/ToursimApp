@@ -16,6 +16,34 @@ class HomeViewController: UIViewController {
   // MARK: - Outlets
   @IBOutlet weak var tourismTableView: UITableView!
   
+  private lazy var badConnectionState: UIView = {
+    let newSubview = UIView()
+    newSubview.setDimensions(width: 250, height: 250)
+    
+    return newSubview
+  }()
+  
+  private lazy var imgConnection: UIImageView = {
+    let newSubview = UIImageView()
+    newSubview.image = UIImage.imgConnection
+    newSubview.setDimensions(width: 100, height: 100)
+    newSubview.contentMode = .scaleAspectFit
+    newSubview.tintColor = .gray
+    return newSubview
+  }()
+  
+  private lazy var lblConnection: UILabel = {
+    let newSubview = UILabel()
+    newSubview.font = UIFont.font(type: .robotoRegular, size: 16)
+    newSubview.setDimensions(width: 250)
+    newSubview.textColor = .gray
+    newSubview.textAlignment = .center
+    newSubview.numberOfLines = 0
+    newSubview.text = "Your internet is unreachable! please try again."
+    
+    return newSubview
+  }()
+  
   // MARK: - Variables
   let refreshControl = UIRefreshControl()
   private var tourismList = [Place]()
@@ -40,6 +68,7 @@ class HomeViewController: UIViewController {
     configureViews()
     observeValues()
     reloadHomeData()
+    
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -48,23 +77,42 @@ class HomeViewController: UIViewController {
   
   // MARK: - Setup views
   private func configureViews(){
-    view.addSubview(tourismTableView)
-    tourismTableView.anchor(left: view.leftAnchor, paddingLeft: 0)
-    tourismTableView.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 0)
-    tourismTableView.anchor(right: view.rightAnchor, paddingRight: 0)
-    tourismTableView.anchor(bottom: view.bottomAnchor, paddingBottom: 0)
     
-    tourismTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
-    tourismTableView.delegate = self
-    tourismTableView.dataSource = self
-    tourismTableView.separatorColor = .clear
-    
-    if #available(iOS 10.0, *) {
-      tourismTableView.refreshControl = refreshControl
+    if NetworkMonitor.shared.isConnected {
+      view.addSubview(tourismTableView)
+      tourismTableView.anchor(left: view.leftAnchor, paddingLeft: 0)
+      tourismTableView.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 0)
+      tourismTableView.anchor(right: view.rightAnchor, paddingRight: 0)
+      tourismTableView.anchor(bottom: view.bottomAnchor, paddingBottom: 0)
+      
+      tourismTableView.register(HomeTableViewCell.self, forCellReuseIdentifier: HomeTableViewCell.identifier)
+      tourismTableView.delegate = self
+      tourismTableView.dataSource = self
+      tourismTableView.separatorColor = .clear
+      
+      if #available(iOS 10.0, *) {
+        tourismTableView.refreshControl = refreshControl
+      } else {
+        tourismTableView.addSubview(refreshControl)
+      }
+      refreshControl.addTarget(self, action: #selector(onPullToRefresh(_:)), for: .valueChanged)
     } else {
-      tourismTableView.addSubview(refreshControl)
+      
+      view.addSubview(badConnectionState)
+      badConnectionState.anchor(left: view.leftAnchor, paddingLeft: 0)
+      badConnectionState.anchor(top: view.safeAreaLayoutGuide.topAnchor, paddingTop: 0)
+      badConnectionState.anchor(right: view.rightAnchor, paddingRight: 0)
+      badConnectionState.anchor(bottom: view.bottomAnchor, paddingBottom: 0)
+      
+      badConnectionState.addSubview(imgConnection)
+      imgConnection.centerX(inView: badConnectionState)
+      imgConnection.anchor(top: badConnectionState.topAnchor, paddingTop: 130)
+      
+      badConnectionState.addSubview(lblConnection)
+      lblConnection.centerX(inView: badConnectionState)
+      lblConnection.anchor(top: imgConnection.bottomAnchor, paddingTop: 20)
     }
-    refreshControl.addTarget(self, action: #selector(onPullToRefresh(_:)), for: .valueChanged)
+    
   }
   
   

@@ -15,6 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     
+    NetworkMonitor.shared.startMonitoring()
+    
     window = UIWindow(frame: UIScreen.main.bounds)
     
     let navigator: HomeNavigator = assembler.resolve()

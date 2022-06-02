@@ -13,6 +13,7 @@ extension UIImage {
   static let profile = UIImage(systemName: "person.circle")
   static let icLike = UIImage(systemName: "heart.fill")
   static let icBack = UIImage(systemName: "chevron.backward")
+  static let imgConnection = UIImage(systemName: "wifi.exclamationmark")
   static let imgProfile = UIImage(named: "Profile")
   
 }
